@@ -3,23 +3,21 @@ automatically check recent papers of interest from arXiv.
 
 
 * main.py
-: specify keywords and execute search
+  : specify keywords and execute search
 
 
 * functions.py
-: defined functions
+  : defined functions
 
 
 * df_hit.csv
-  results hit on search
+  : results hit on search
 
 
 * .github/workflows/scheduledRun.yml
-
-scheduled daily run
+  : scheduled daily run
 
 
 * requirements.txt
-
-required packages for github actions
+  : required packages for github actions
 
