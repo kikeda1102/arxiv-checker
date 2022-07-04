@@ -1,6 +1,10 @@
 # arxiv-checker
 automatically check recent papers of interest from arXiv.
 
+results can be seen in log.csv.
+
+using arxiv.arxiv (api wrapper in python) and GitHub Actions
+
 
 * main.py
   : specify keywords and execute search
