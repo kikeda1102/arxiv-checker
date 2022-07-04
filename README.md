@@ -10,8 +10,8 @@ automatically check recent papers of interest from arXiv.
   : defined functions
 
 
-* df_hit.csv
-  : results hit on search
+* log.csv
+  : results log
 
 
 * .github/workflows/scheduledRun.yml
