@@ -18,8 +18,7 @@ def main():
             'Swampland',
             'Weak Gravity Conjecture',
             'distance conjecture',
-            'completeness hypothesis',
-            'Sugimoto',
+            'holographic QCD',
            ] # 大文字小文字は区別なし
     
     # search and output

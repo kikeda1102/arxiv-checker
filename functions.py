@@ -58,11 +58,11 @@ def getdf(dateA_s, dateB_s):
         abstract.append(result.summary)
     
     # make df
-    df = pd.DataFrame(columns=['title','publishedDate','authors','link','abstract'])
+    df = pd.DataFrame(columns=['title','publishedDate','link','authors','abstract'])
     df['title'] = title
     df['publishedDate'] = publishedDate
-    df['authors'] = authors
     df['link'] = link
+    df['authors'] = authors
     df['abstract'] = abstract
     
     return df
@@ -78,17 +78,17 @@ def search(df, kwds):
     # search
     if len(df) != 0: # 土日は更新なしなのでHitしない
         for i in range(len(kwds)):
-            df2[f'{kwds[i]}'] = df['abstract'].str.contains(kwds[i], case=False) # 大文字小文字区別無しで検索
+            df2[f'Key_{kwds[i]}'] = df['abstract'].str.contains(kwds[i], case=False) # 大文字小文字区別無しで検索
 
     # make flag
     flag = []
     for i in range(len(df2)):
         flag.append( any( df2.iloc[i, :] ) ) # 1つでもtrueならtrue
 
-    df3 = pd.concat([df,df2], axis=1)
-    df3['anyKeywords'] = flag
+    df3 = pd.concat([df2,df], axis=1)
+    df3['anyKey'] = flag
 
-    df_hit = df3[ df3['anyKeywords'] ] # filter
+    df_hit = df3[ df3['anyKey'] ] # filter
     
     return df_hit
 
