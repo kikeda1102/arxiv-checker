@@ -16,13 +16,15 @@ def main():
     df = functions.getdf(dateA_s, dateB_s)
     
     # search keywords
-    kwds = ['Positivity',
-            'Swampland',
-            'Weak Gravity Conjecture',
-            'distance conjecture',
-            'holographic QCD',
-            'landscape',
-           ] # 大文字小文字は区別せず検索される
+    kwds = [
+        'quantum gravity',
+        'Positivity',
+        'Swampland',
+        'Weak Gravity Conjecture',
+        'distance conjecture',
+        'holographic QCD',
+        'landscape',
+    ] # 大文字小文字は区別せず検索される
     
     # search
     df_hit = functions.search(df, kwds)

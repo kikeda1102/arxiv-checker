@@ -89,8 +89,8 @@ def search(df, kwds):
     df3['anyKey'] = flag
 
     df_hit = df3[ df3['anyKey'] ] # filter
-    df_hit2 = df_hit.drop('anyKey',axis=1)
+    # df_hit2 = df_hit.drop('anyKey',axis=1)
     
-    return df_hit2
+    return df_hit
 
 
