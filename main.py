@@ -2,13 +2,15 @@
 
 import functions
 import pandas as pd
+import datetime
 
 def main():
     
-    # set dates
+    # set date
+    
     now = functions.now()
     
-    dateA_s, dateB_s = functions.recentDates(now=now, A=4, B=1) # 4日前から1日前
+    dateA_s, dateB_s = functions.recentDates(now=now, A=1, B=1) # 1日前
     
     # get data
     df = functions.getdf(dateA_s, dateB_s)
@@ -19,13 +21,18 @@ def main():
             'Weak Gravity Conjecture',
             'distance conjecture',
             'holographic QCD',
-           ] # 大文字小文字は区別なし
+            'landscape',
+           ] # 大文字小文字は区別せず検索される
     
-    # search and output
-    df_hit = functions.search(df, kwds) # df_hit.csvに書き出し
+    # search
+    df_hit = functions.search(df, kwds)
+    
+    # attach now date
+    df_hit.insert(loc = 0, column= 'AcquisitionDate', value = functions.now().date())
     
     # log
-    df_hit.to_csv('log.csv', index=False, header=False, mode='a') # 追記モード
+    # df_hit.to_csv('log.csv', index=False, header=True, mode='w') # 上書きモード, headerあり
+    df_hit.to_csv('log.csv', index=False, header=False, mode='a') # 追記モード, headerなし
     
     return
 

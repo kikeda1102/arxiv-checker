@@ -36,6 +36,7 @@ def getdf(dateA_s, dateB_s):
     '''
     get data by arxiv package
     '''
+    
     search = arxiv.Search(
         query = f'cat:hep-th AND submittedDate:[{dateA_s} TO {dateB_s}235959]',
         max_results = 100,
@@ -43,25 +44,24 @@ def getdf(dateA_s, dateB_s):
     )
     
     # pack into df
+    link = []
     title = []
     publishedDate = []
     authors = []
-    link = []
     abstract = []
     
     for result in search.results():
-        
+        link.append(result.entry_id)
         title.append(result.title)
         publishedDate.append(result.published)
         authors.append(result.authors)
-        link.append(result.entry_id)
         abstract.append(result.summary)
     
     # make df
-    df = pd.DataFrame(columns=['title','publishedDate','link','authors','abstract'])
+    df = pd.DataFrame(columns=['link','title','publishedDate','authors','abstract'])
+    df['link'] = link
     df['title'] = title
     df['publishedDate'] = publishedDate
-    df['link'] = link
     df['authors'] = authors
     df['abstract'] = abstract
     
@@ -89,7 +89,8 @@ def search(df, kwds):
     df3['anyKey'] = flag
 
     df_hit = df3[ df3['anyKey'] ] # filter
+    df_hit2 = df_hit.drop('anyKey',axis=1)
     
-    return df_hit
+    return df_hit2
 
 
