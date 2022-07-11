@@ -39,7 +39,7 @@ def getdf(dateA_s, dateB_s):
     
     search = arxiv.Search(
         query = f'cat:hep-th AND submittedDate:[{dateA_s} TO {dateB_s}235959]',
-        max_results = 100,
+        max_results = 200,
         sort_by = arxiv.SortCriterion.SubmittedDate,
     )
     

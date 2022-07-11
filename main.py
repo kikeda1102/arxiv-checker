@@ -10,14 +10,14 @@ def main():
     
     now = functions.now()
     
-    dateA_s, dateB_s = functions.recentDates(now=now, A=1, B=1) # 1日前
+    dateA_s, dateB_s = functions.recentDates(now=now, A=3, B=0) # 3日前から0日前で検索
     
     # get data
     df = functions.getdf(dateA_s, dateB_s)
     
     # search keywords
     kwds = [
-        'quantum gravity',
+        'EFT',
         'Positivity',
         'Swampland',
         'Weak Gravity Conjecture',
@@ -29,12 +29,17 @@ def main():
     # search
     df_hit = functions.search(df, kwds)
     
-    # attach now date
+    # attach current date
     df_hit.insert(loc = 0, column= 'AcquisitionDate', value = functions.now().date())
     
-    # log
+    # output log
     # df_hit.to_csv('log.csv', index=False, header=True, mode='w') # 上書きモード, headerあり
     df_hit.to_csv('log.csv', index=False, header=False, mode='a') # 追記モード, headerなし
+    
+    # resolve duplication of log
+    df = pd.read_csv('log.csv')
+    df2 = df[~df.duplicated()]
+    df2.to_csv('log.csv', index=False, header=True, mode='w')
     
     return
 
