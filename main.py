@@ -17,6 +17,7 @@ def main():
     
     # search keywords
     kwds = [
+        'Regge',
         'EFT',
         'Positivity',
         'Swampland',
