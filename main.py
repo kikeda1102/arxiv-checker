@@ -21,7 +21,7 @@ def main():
         'EFT',
         'Positivity',
         'Swampland',
-        'Weak Gravity Conjecture',
+        'Weak Gravity',
         'distance conjecture',
         'holographic QCD',
         'landscape',
@@ -34,8 +34,8 @@ def main():
     df_hit.insert(loc = 0, column= 'AcquisitionDate', value = functions.now().date())
     
     # output log
-    # df_hit.to_csv('log.csv', index=False, header=True, mode='w') # 上書きモード, headerあり
-    df_hit.to_csv('log.csv', index=False, header=False, mode='a') # 追記モード, headerなし
+    df_hit.to_csv('log.csv', index=False, header=True, mode='w') # 上書きモード, headerあり
+    # df_hit.to_csv('log.csv', index=False, header=False, mode='a') # 追記モード, headerなし
     
     # resolve duplication of log
     df = pd.read_csv('log.csv')

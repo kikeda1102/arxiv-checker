@@ -85,12 +85,12 @@ def search(df, kwds):
     for i in range(len(df2)):
         flag.append( any( df2.iloc[i, :] ) ) # 1つでもtrueならtrue
 
-    df3 = pd.concat([df2,df], axis=1)
+    df3 = pd.concat([df,df2], axis=1)
     df3['anyKey'] = flag
 
-    df_hit = df3[ df3['anyKey'] ] # filter
-    # df_hit2 = df_hit.drop('anyKey',axis=1)
+    df_hit = df3[ df3['anyKey'] ] # filter    
+    df_hit2 = df_hit.drop({'anyKey','abstract'},axis=1)
     
-    return df_hit
+    return df_hit2
 
 

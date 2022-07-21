@@ -1,58 +1,7 @@
-AcquisitionDate,Key_Regge,Key_EFT,Key_Positivity,Key_Swampland,Key_Weak Gravity Conjecture,Key_distance conjecture,Key_holographic QCD,Key_landscape,link,title,publishedDate,authors,abstract,anyKey
-2022-07-20,False,False,False,False,False,False,False,True,http://arxiv.org/abs/2207.09449v1,Correlated Fractional Dirac Materials,2022-07-19 17:59:33+00:00,"[arxiv.Result.Author('Bitan Roy'), arxiv.Result.Author('Vladimir Juricic')]","Fractional Dirac materials (FDMs) feature a fractional energy-momentum
-relation $E(\vec{k}) \sim |\vec{k}|^{\alpha}$, where $\alpha \; (<1)$ is a
-noninteger number, in contrast to the situation in conventional Dirac materials
-with $\alpha=1$. Here we compute the effects of both short-range and long-range
-repulsive Coulomb interactions in two- and three-dimensional FDMs. Generic but
-sufficiently weak short-range interaction is an irrelevant perturbation in
-$d$-dimensional FDMs, and nucleation of a correlated insulator takes place
-through a quantum critical point. The universality class of the associated
-quantum phase transition is determined by the correlation length exponent
-$\nu^{-1}=d-\alpha$ and dynamic scaling exponent $z=\alpha$, starkly distinct
-from its counterpart in conventional Dirac systems. On the other hand, the
-fractional dispersion is protected against long-range interaction due to its
-nonanalytic structure. Rather a linear Dirac dispersion gets generated under
-coarse graining and the associated Fermi velocity increases logarithmically in
-the infrared regime. Altogether, the family of correlated FDMs unfolds a new
-landscape, accommodating unconventional emergent many-body phenomena.",True
-2022-07-20,False,False,False,True,False,False,False,False,http://arxiv.org/abs/2207.09448v1,Swampland Bounds on Dark Sectors,2022-07-19 17:59:30+00:00,"[arxiv.Result.Author('Miguel Montero'), arxiv.Result.Author('Julian B. Muñoz'), arxiv.Result.Author('Georges Obied')]","We use Swampland principles to theoretically disfavor regions of the
-parameter space of dark matter and other darkly charged particles that may
-exist. The Festina Lente bound, the analogue of the Weak-Gravity conjecture in
-de Sitter, places constraints on the mass and charge of dark particles, which
-here we show cover regions in parameter space that are currently allowed by
-observations. As a consequence, a broad set of new ultra-light particles are in
-the Swampland, independently of their cosmic abundance, showing the
-complementarity of Quantum Gravity limits with laboratory and astrophysical
-studies. In parallel, a Swampland bound on the UV cutoff associated to the
-axion giving a St\""{u}ckelberg photon its longitudinal mode translates to a new
-constraint on the kinetic mixings and masses of dark photons. This covers part
-of the parameter space targeted by upcoming dark-photon direct-detection
-experiments. Moreover, it puts astrophysically interesting models in the
-Swampland, including freeze-in dark matter through an ultra-light dark photon,
-as well as radio models invoked to explain the 21-cm EDGES anomaly.",True
-2022-07-20,False,True,False,False,False,False,False,False,http://arxiv.org/abs/2207.09275v1,IBP reduction via Gröbner bases in a rational double-shift algebra,2022-07-19 13:39:44+00:00,"[arxiv.Result.Author('Mohamed Barakat'), arxiv.Result.Author('Robin Brüser'), arxiv.Result.Author('Tobias Huber'), arxiv.Result.Author('Jan Piclum')]","We report on an approach to integration-by-parts reduction based on Gr\""obner
-bases. We establish the underlying noncommutative rational double-shift algebra
-wherein the integration-by-parts relations form a left ideal. We describe in
-detail the one-loop massless box as an example where we achieved the full
-reduction to master integrals by means of the Gr\""obner basis approach, and
-report on the performance of the implementation. We also identify potential
-bottlenecks in more complicated examples and elaborate on interesting further
-directions.",True
-2022-07-20,False,True,False,False,False,False,False,False,http://arxiv.org/abs/2207.08355v1,Flows into de Sitter from anisotropic initial conditions: An effective field theory approach,2022-07-18 02:36:56+00:00,"[arxiv.Result.Author('Feraz Azhar'), arxiv.Result.Author('David I. Kaiser')]","For decades, physicists have analyzed various versions of a ``cosmic no-hair""
-conjecture, to understand under what conditions a spacetime that is initially
-spatially anisotropic and/or inhomogeneous will flow into an isotropic and
-homogeneous state. Wald's theorem, in particular, established that homogeneous
-but anisotropic spacetimes, if filled with a positive cosmological constant
-plus additional matter sources that satisfy specific energy conditions, will
-necessarily flow toward an (isotropic) de Sitter state at late times. In this
-paper we study the flow of homogeneous but anisotropic spacetimes toward
-isotropic states under conditions more general than those to which Wald's
-theorem applies. We construct an effective field theory (EFT) treatment for
-generic ``single-clock"" systems in anisotropic spacetimes -- which are not
-limited to realizations compatible with scalar-field constructions -- and
-identify fixed points in the resulting phase space. We identify regions of this
-phase space that flow to isotropic fixed points -- including a de Sitter fixed
-point -- even in the absence of a bare cosmological constant, and for matter
-sources that do not obey the energy conditions required for Wald's theorem.
-Such flows into de Sitter reveal the emergence of an effective cosmological
-constant.",True
+AcquisitionDate,link,title,publishedDate,authors,Key_Regge,Key_EFT,Key_Positivity,Key_Swampland,Key_Weak Gravity,Key_distance conjecture,Key_holographic QCD,Key_landscape
+2022-07-21,http://arxiv.org/abs/2207.09474v1,Conformal field theory for particle physicists,2022-07-19 18:00:04+00:00,[arxiv.Result.Author('Marc Gillioz')],False,True,False,False,False,False,False,False
+2022-07-21,http://arxiv.org/abs/2207.09449v1,Correlated Fractional Dirac Materials,2022-07-19 17:59:33+00:00,"[arxiv.Result.Author('Bitan Roy'), arxiv.Result.Author('Vladimir Juricic')]",False,False,False,False,False,False,False,True
+2022-07-21,http://arxiv.org/abs/2207.09448v1,Swampland Bounds on Dark Sectors,2022-07-19 17:59:30+00:00,"[arxiv.Result.Author('Miguel Montero'), arxiv.Result.Author('Julian B. Muñoz'), arxiv.Result.Author('Georges Obied')]",False,False,False,True,False,False,False,False
+2022-07-21,http://arxiv.org/abs/2207.09275v1,IBP reduction via Gröbner bases in a rational double-shift algebra,2022-07-19 13:39:44+00:00,"[arxiv.Result.Author('Mohamed Barakat'), arxiv.Result.Author('Robin Brüser'), arxiv.Result.Author('Tobias Huber'), arxiv.Result.Author('Jan Piclum')]",False,True,False,False,False,False,False,False
+2022-07-21,http://arxiv.org/abs/2207.08688v1,Dark Energy and Extending the Geodesic Equations of Motion: A Spectrum of Galactic Rotation Curves,2022-07-18 15:38:25+00:00,[arxiv.Result.Author('Achilles D. Speliotopoulos')],False,False,False,False,True,False,False,False
+2022-07-21,http://arxiv.org/abs/2207.08355v1,Flows into de Sitter from anisotropic initial conditions: An effective field theory approach,2022-07-18 02:36:56+00:00,"[arxiv.Result.Author('Feraz Azhar'), arxiv.Result.Author('David I. Kaiser')]",False,True,False,False,False,False,False,False
