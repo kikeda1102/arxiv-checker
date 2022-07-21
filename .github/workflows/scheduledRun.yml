@@ -37,7 +37,7 @@ jobs:
           git config user.email kikeda1102.2@gmail.com
           git add .
           git diff --exit-code
-      continue-on-error: true
+        continue-on-error: true
       - name: Commit & Push # 実行した結果をプッシュして変更をレポジトリに反映
           git commit -am "Auto run by GitHub Actions"
           git push origin main
