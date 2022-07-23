@@ -29,18 +29,11 @@ jobs:
       - name: Run main.py # Pythonファイルの実行
         run: python main.py
   
-      - name: Add & Diff # 差分があるか
-        run: |
-          git config user.name kikeda1102
-          git config user.email kikeda1102.2@gmail.com
-          git add .
-          git diff --exit-code
+      - name: Commit & Push # 差分があるか
         continue-on-error: true
-
-      - name: Commit & Push # 実行した結果をプッシュして変更をレポジトリに反映
         run: |
           git config user.name kikeda1102
           git config user.email kikeda1102.2@gmail.com
           git add .
-          git commit -am "Auto run by GitHub Actions"
+          git diff --exit-code || git commit -am "Auto run by GitHub Actions"
           git push origin main
