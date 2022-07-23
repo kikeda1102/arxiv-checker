@@ -32,14 +32,14 @@ def recentDates(now, A,B):
     
     return dateA_s, dateB_s
     
-def getdf(dateA_s, dateB_s):
+def getdf(dateA_s, dateB_s, max_results):
     '''
     get data by arxiv package
     '''
     
     search = arxiv.Search(
         query = f'cat:hep-th AND submittedDate:[{dateA_s} TO {dateB_s}235959]',
-        max_results = 200,
+        max_results = max_results,
         sort_by = arxiv.SortCriterion.SubmittedDate,
     )
     

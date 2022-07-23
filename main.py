@@ -10,10 +10,10 @@ def main():
     
     now = functions.now()
     
-    dateA_s, dateB_s = functions.recentDates(now=now, A=3, B=0) # 3日前から0日前で検索
+    dateA_s, dateB_s = functions.recentDates(now=now, A=7, B=0) # 3日前から0日前で検索
     
     # get data
-    df = functions.getdf(dateA_s, dateB_s)
+    df = functions.getdf(dateA_s=dateA_s, dateB_s=dateB_s, max_results=300)
     
     # search keywords
     kwds = [
