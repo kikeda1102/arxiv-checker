@@ -54,8 +54,15 @@ def getdf(dateA_s, dateB_s, max_results):
         link.append(result.entry_id)
         title.append(result.title)
         publishedDate.append(result.published)
-        authors.append(result.authors)
         abstract.append(result.summary)
+
+        # treatment for authors
+        authors_list = []
+        for i in result.authors:
+            authors_list.append( str(i) ) # strにする
+        
+        authors.append( ",".join(authors_list) ) # さらにstrの1要素にまとめる
+        
     
     # make df
     df = pd.DataFrame(columns=['link','title','publishedDate','authors','abstract'])
@@ -64,6 +71,8 @@ def getdf(dateA_s, dateB_s, max_results):
     df['publishedDate'] = publishedDate
     df['authors'] = authors
     df['abstract'] = abstract
+
+
     
     return df
 
