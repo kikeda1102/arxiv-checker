@@ -1,7 +1,7 @@
 name: scheduledRun # GitHub Actions
 
 on:
-  push:
+  # push:
   workflow_dispatch:
   schedule:
     # cron: [分] [時] [日] [月] [曜日] (UTC)
@@ -38,6 +38,6 @@ jobs:
             git config user.name kikeda1102
             git config user.email kikeda1102.2@gmail.com
             git add .
-            git diff --exit-code || git commit -am "Auto run by GitHub Actions"
+            git commit -am "Auto run by GitHub Actions"
             git push origin main
           fi
