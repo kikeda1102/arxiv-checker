@@ -32,12 +32,12 @@ jobs:
       - name: Commit & Push # 差分があるか
         # continue-on-error: true
         run: |
-          git add .
+          git add -N .
           if ! git diff --exit-code --quiet
           then
             git config user.name kikeda1102
             git config user.email kikeda1102.2@gmail.com
             git add .
             git commit -am "Auto run by GitHub Actions"
-            git push origin main
+            git push
           fi
